@@ -17,7 +17,7 @@ function getData(){
         return alert("pesan tidak boleh kosong")
     }
 
-    let emailReceiver = "mqardhawi9@.com"
+    let emailReceiver = "mqardhawi9@gmail.com"
 
     let mailTo = document.createElement('a')
     mailTo.href = `mailto:${emailReceiver}?subject=${subject}&body=Hello my name ${name}, ${subject}, ${message}`
