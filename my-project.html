@@ -5,29 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/my-project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>My Project</title>
-    
 </head>
 <body>
-    <nav>
-        <div class="item-left">
-            <ul>
-                <li class="imgLogo">
-                <img src="assets/image/logoBrand.png" alt="logoBrand" />
-                </li>
-                <li>
-                    <a class="active" href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="my-project.html"> My Project </a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="item-right">
-            <a href="contact-form.html"> Contact Me</a>
-        </div>
-    </nav>
+    <div>
+        <nav>
+            <div class="item-left">
+                <ul>
+                    <li class="imgLogo">
+                    <img src="assets/image/logoBrand.png" alt="logoBrand" />
+                    </li>
+                    <li>
+                        <a class="active" href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="my-project.html"> My Project </a>
+                    </li>
+                </ul>
+            </div>
+    
+            <div class="item-right">
+                <a href="contact-form.html"> Contact Me</a>
+            </div>
+        </nav>
+    </div>
     <div class="container-box">
         <div class="container">
             <form onsubmit="getData(event)">
@@ -51,13 +53,19 @@
                 <div class="content">
                     <label for="technologies">Technologies</label>
                     <div class="check">
-                        <input type="checkbox" value="nodeJs" name="technologies"/>Node JS
-                        <input type="checkbox" value="nextJs" name="technologies"/>Next JS
-                        <input type="checkbox" value="reactJs" name="technologies"/>React JS
-                        <input type="checkbox" value="ts" name="technologies"/>TypeScript
+                        <table>
+                            <tr>
+                                <td><input type="checkbox" value="NodeJs" id="nodeJs" name="technologies"/><i class="fa-brands fa-node-js"></i> Node JS</td>
+                                <td><input type="checkbox" value="NextJs" id="nextJs" name="technologies"/><i class="fa-sharp fa-solid fa-circle-n"></i> Next JS</td>
+                            </tr>
+                            <tr>
+                                <td><input type="checkbox" value="ReactJs" id="reactJs" name="technologies"/><i class="fa-brands fa-react"></i> React JS</td>
+                                <td><input type="checkbox" value="TypeScript" id="ts" name="technologies"/>TypeScript</td>
+                            </tr>
+                        </table>
                     </div>
                 </div>
-                <div>
+                <div class="upload">
                     <label for="upload">Upload Image</label>
                     <input type="file" id="images">
                 </div>
@@ -77,7 +85,7 @@
                     <img src="assets/image/foto-profil.jpeg" alt="">
                 </div>
                 <div class="title">
-                      <h2>Dumbways Mobile App</h2>
+                      <h2><a href="blog-detail.html">Dumbways Mobile App</a></h2>
                 </div>
                 <div class="durasi">
                     <p>durasi 3 bulan</p>
@@ -86,7 +94,7 @@
                     <p>Deskripsi</p>
                 </div>
                 <div class="technologies">
-                    <p>Technologies</p>
+                    <p id="tech">Technologies</p>
                 </div>
                 <div class="btn-group">
                     <button class="btn">edit</button>
