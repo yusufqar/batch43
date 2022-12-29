@@ -1,8 +1,90 @@
 * {
-    margin: o;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
     font-family: 'Poppins', sans-serif;
 }
 
+nav {
+    height: 8vh;
+    background-color: #dbdbdb!important;
+}
+.con1 {
+    background-color: #868282!important;
+}
+
+.container-fluid {
+    
+}
+
+.container-form {
+    width: 600px;
+}
+
+.d-flex {
+    display: flex!important;
+}
+
+.item-right a {
+    text-decoration: none;
+    padding: 8px 20px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-size: 15px;
+    border: none;
+} 
+
+.email {
+    color: white; 
+    padding: 8px 20px; 
+    text-decoration: none; 
+    background-color: black; 
+    border-radius: 20px;
+}
+
+.cv {
+    text-decoration: none; 
+    color: black;  
+    margin-left: 20px;
+}
+
+
+.title .card-title {
+    margin: 10px 0 0 5px;
+    font-size: 22px;
+}
+
+.title .card-title a {
+    text-decoration: none;
+    color: black;
+}
+
+.durasi {
+    font-size: 14px;
+    color: #868282;
+    margin: 0 0 0 5px;
+}
+
+.deskripsi {
+    font-family: sans-serif;
+    margin: 10px 0 0 5px;
+}
+
+.technologies {
+    font-family: sans-serif;
+    margin: 10px 0 0 5px;
+}
+
+.btn-group .btn {
+    padding: 5px 50px!important;
+    margin: 5px 0 10px 10px;
+    background-color: #111727!important;
+    color: white!important;
+    border-radius: 10px!important;
+}
+/* 
 body {
     background-color: #dbdbdb;
 }
@@ -97,7 +179,7 @@ nav {
     background-color: #f0ecec;
     height: 50px;
     align-items: center;
-    /* justify-content: center; */
+    
 }
 
 img {
@@ -140,4 +222,5 @@ nav ul li .active {
     background-color: black;
     color: white;
     border-radius: 5px;
-}
+} 
+*/

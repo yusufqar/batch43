@@ -124,6 +124,7 @@ function getDistance(time) {
       }, 1000)
 }
 
+
 function check(markedCheckbox) {
     // let markedCheckbox = document.getElementsByName('technologies')
   for (let checkbox of markedCheckbox) {

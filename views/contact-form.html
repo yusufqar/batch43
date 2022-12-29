@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/assets/css/contact-form.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Contact Form</title>
+    
+</head>
+<body>
+    <nav class="navbar navbar-light navbar-expand-lg bg-light">
+        <a href="/home" class="navbar-brand ms-5"> 
+            <img src="public/assets/image/logoBrand.png" alt="logoBrand" width="50px" class="d-inline-block align-middle"/>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link active" style="font-weight: bold;" href="/home">Home</a>
+                </li>
+                <li>
+                    <a class="nav-link" href="/add-project"> Add Project </a>
+                </li>
+            </ul>
+        </div>
+            <div class="d-flex flex-row-reverse item-right me-5">
+                <a href="/contact"> Contact Me</a>
+            </div>        
+    </nav>
+    <div class="container-fluid d-flex justify-content-center align-items-center mt-5 mb-5">
+        <div class="container-form">
+            <h2 class="mb-3 text-center">GET IN TOUCH</h2>
+            <form action="">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" id="name" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" class="form-control"/>
+                </div>
+                <div class="mb-3">
+                    <label for="telp" class="form-label">Phone Number</label>
+                    <input type="text" id="telp" class="form-control"/>
+                </div>
+                <div class="mb-3">
+                    <label for="subject" class="form-label">Subject</label>
+                    <select id="subject" class="form-control form-select">
+                        <option>Let's Talk</option>
+                        <option>Front end</option>
+                        <option>Back end</option>
+                        <option>Fullstack</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Your Message</label>
+                    <textarea style="resize: none;" id="message" class="form-control"></textarea>
+                </div>
+                <div>
+                    <button type="button" class="button btn" onsubmit="getData()">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- <div class="container-box">
+        <div class="container">
+            <form>
+                <h1>GET IN TOUCH</h1>
+                <div class="content">
+                    <label for="name">Name</label>
+                    <input type="text" id="name"/>
+                </div>
+                <div class="content">
+                    <label for="email">Email</label>
+                    <input type="email" id="email"/>
+                </div>
+                <div class="content">
+                    <label for="telp" >Phone Number</label>
+                    <input type="text" id="telp"/>
+                </div>
+                <div class="content">
+                    <label for="subject">Subject</label>
+                    <select id="subject">
+                        <option>Let's Talk</option>
+                        <option>Front end</option>
+                        <option>Back end</option>
+                        <option>Fullstack</option>
+                    </select>
+                </div>
+                <div class="content">
+                    <label for="message">Your Message</label>
+                    <textarea id="message"></textarea>
+                </div>
+                <div>
+                    <button class="button" type="button" onclick="getData()">submit</button>
+                </div>
+            </form>
+        </div>
+    </div>    -->
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script src="public/assets/js/contact-form.js"></script>
+</html>
