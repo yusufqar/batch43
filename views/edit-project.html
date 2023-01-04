@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/assets/css/my-project.css">
+    <link rel="stylesheet" href="../public/assets/css/edit-project.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <title>{{.Title}}</title>
@@ -13,7 +13,7 @@
     <div>
         <nav class="navbar navbar-light navbar-expand-lg bg-light">
             <a href="/home" class="navbar-brand ms-5"> 
-                <img src="public/assets/image/logoBrand.png" alt="logoBrand" width="50px" class="d-inline-block align-middle"/>
+                <img src="../public/assets/image/logoBrand.png" alt="logoBrand" width="50px" class="d-inline-block align-middle"/>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -35,25 +35,26 @@
     </div>
     <div class="container-fluid d-flex justify-content-center align-items-center mt-5 mb-5">
         <div class="container-form">
-            <h2 class="mb-3 text-center">ADD MY PROJECT</h2>
-            <form action="/add-project" method="POST">
+            <h2 class="mb-3 text-center">EDIT PROJECT</h2>
+            <!-- {{range $data := .Projects }} -->
+            <form action="/edit-project/{{$data.Id}}" method="POST">
                 <div class="mb-3">
                     <label for="name" class="form-label">Project Name</label>
-                    <input type="text" id="name" name="name" class="form-control" />
+                    <input type="text" id="name" name="name" class="form-control" value="{{$data.Name}}" />
                 </div>
                 <div class="mb-3">
                     <div class="mb-3">
                         <label for="start" class="form-label">Start Date</label>
-                        <input type="date" id="start" name="start" class="form-control" />
+                        <input type="date" id="start" name="start" class="form-control" value="{{$data.Start_date}}"/>
                     </div>
                     <div class="mb-3">
                         <label for="end" class="form-label">End Date</label>
-                        <input type="date" id="end " name="end"   class="form-control"/>
+                        <input type="date" id="end " name="end"   class="form-control" value="{{$data.End_date}}"/>
                     </div>
                 </div>
                 <div class="mb-3">
                     <label for="description" class="form-label">Description</label>
-                    <textarea id="description" name="description" class="form-control"></textarea>
+                    <textarea id="description" name="description" class="form-control">{{$data.Description}}</textarea>
                 </div>
                 <div class="check mb-3 d-flex flex-column">
                     <div>
@@ -70,9 +71,10 @@
                     <input type="file" id="images" name="images" class="form-control" />
                 </div>
                 <div>
-                    <button type="submit" class="button btn ">Submit</button>
+                    <button type="submit" class="button btn ">Edit</button>
                 </div>
             </form>
+            <!-- {{end}} -->
         </div>
     </div>
     <!-- <div class="container-box">

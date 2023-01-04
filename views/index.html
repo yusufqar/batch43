@@ -73,21 +73,22 @@
                         <img src="public/assets/image/foto-profil.jpeg" alt="" class="foto-profil card-img-top">
                     </div>
                     <div class="title">
-                          <h2 class="card-title"><a href="/blog/{{$index}}" target="_blank">{{$data.Name}}</a></h2>
+                          <h2 class="card-title"><a href="/blog/{{$data.Id}}" target="_blank">{{$data.Name}}</a></h2>
                     </div>
                     <div class="durasi">
-                        <p class="card-text">durasi {{$data.Post_date}}</p>
+                        <!-- <p class="card-text">durasi {{$data.Format_date}}</p> -->
+                        <p class="card-text">durasi {{$data.Format_date}}</p>
                     </div>
                     <div class="deskripsi">
                         <p class="card-text">{{$data.Description}}</p>
                     </div>
                     <div class="technologies">
-                        <p id="tech" class="card-text">{{$data.Technologies}}</p>
+                        <p id="tech" class="card-text">{{$data.Technologies}}</p>            
                     </div>
                     <div class="btn-group">
                         
-                        <a class="btn me-1">Edit</a>
-                        <a class="btn" href="/delete-project/{{$index}}">Delete</a>
+                        <a class="btn me-1" href="/edit-project/{{$data.Id}}">Edit</a>
+                        <a class="btn" href="/delete-project/{{$data.Id}}">Delete</a>
                         
                     </div>
                 </div>
