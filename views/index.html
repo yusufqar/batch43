@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="public/assets/css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <title>{{.Data.Title}}</title>
+    <title>{{.Title}}</title>
 </head>
 <body>
         <nav class="navbar navbar-light navbar-expand-lg">
@@ -21,15 +21,40 @@
                     <li class="nav-item">
                         <a class="nav-link active" style="font-weight: bold;" href="/home">Home</a>
                     </li>
+                    
                     <li>
                         <a class="nav-link" href="/add-project"> Add Project </a>
                     </li>
+                   
                 </ul>
+            </div>
+            <div>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    {{if .IsLogin}}
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Hello, {{.UserName}}</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="/logout" class="nav-link list-active">Logout</a>
+                    </li>   
+                    {{else}} 
+                    <li class="nav-item">
+                      <a class="nav-link active text-orange" aria-current="page" href="/register">Register</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="/login">Login</a>
+                    </li>
+                    {{end}}
+                  </ul>
             </div>
                 <div class="d-flex flex-row-reverse item-right me-5">
                     <a href="/contact"> Contact Me</a>
                 </div>        
         </nav>
+        {{if .FlashData}}
+            <div class="alert alert-success" role="alert">{{.FlashData}}</div>
+        {{end}} 
         <div class="con1 container-fluid d-flex justify-content-center align-items-center p-5">   
         <div class="card d-flex flex-row mt-10" >
             <div class="box" style="width: 700px;">
@@ -89,6 +114,7 @@
                         
                         <a class="btn me-1" href="/edit-project/{{$data.Id}}">Edit</a>
                         <a class="btn" href="/delete-project/{{$data.Id}}">Delete</a>
+                        
                         
                     </div>
                 </div>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../public/assets/css/my-project.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>{{.Title}}</title>
+</head>
+<body>
+    <div>
+        <nav class="navbar navbar-light navbar-expand-lg bg-light">
+            <a href="/home" class="navbar-brand ms-5"> 
+                <img src="../public/assets/image/logoBrand.png" alt="logoBrand" width="50px" class="d-inline-block align-middle"/>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" style="font-weight: bold;" href="/home">Home</a>
+                    </li>
+                    <li>
+                        <a class="nav-link" href="/add-project"> Add Project </a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Hello, {{.UserName}} </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/logout" class="nav-link list-active">Logout</a>
+                    </li>    
+                    <li class="nav-item">
+                      <a class="nav-link active text-orange" aria-current="page" href="/register">Register</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="/login">Login</a>
+                    </li>
+                  </ul>
+            </div>
+                <div class="d-flex flex-row-reverse item-right me-5">
+                    <a href="/contact"> Contact Me</a>
+                </div>        
+        </nav>
+    </div>
+    <div class="container-fluid d-flex justify-content-center align-items-center mt-5 mb-5">
+        <div class="container-form">
+            <h2 class="mb-3 text-center">REGISTER YOUR ACCOUNT</h2>
+            <form action="/register" method="POST">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" id="name" name="name" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" />
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" id="password " name="password"   class="form-control"/>
+                    </div>
+                <div>
+                    <button type="submit" class="button btn ">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</html>
